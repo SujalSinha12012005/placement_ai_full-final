@@ -135,39 +135,30 @@ FLASK_ENV=development
 ```
 <img width="824" height="522" alt="image" src="https://github.com/user-attachments/assets/cdbee903-1071-4115-ac77-ffbf90624893" />
 
-1. Planning & Requirement Gathering
-   ├─ Define core features: resume upload, AI scoring, quiz, Q&A
-   ├─ Identify target users: students, placement admins
-   └─ Tools & stack finalized (Flask, Gemini, Bootstrap, CSV storage)
+---
 
-2. Design
-   ├─ Wireframe: upload.html, admin.html, quiz.html
-   ├─ System architecture (Browser → Flask → Gemini)
-   └─ Define APIs and CSV schema
+## Development Methodology: Agile SDLC
 
-3. Development (Iterative Sprints)
-   ├─ Sprint 1: Resume upload + CSV storage
-   ├─ Sprint 2: Gemini AI integration for scoring & suggestions
-   ├─ Sprint 3: Ask-a-Question module
-   ├─ Sprint 4: Quiz & results
-   └─ Sprint 5: Admin dashboard & caching
+This project follows the **Agile Software Development Life Cycle (SDLC)** to ensure rapid, flexible, and user-driven development.
 
-4. Testing
-   ├─ Unit testing for Flask routes
-   ├─ API response handling (429 fallback, errors)
-   └─ Manual testing with 10–20 resumes
+### Why Agile?
 
-5. Deployment
-   ├─ Local testing with `flask run`
-   ├─ Optional: Deploy to Heroku / Render / Railway
-   └─ Environment variables via `.env`
+- **Iterative & Incremental Development**  
+  Features are delivered in small, manageable sprints (e.g., resume upload → AI analysis → Q&A → quiz → admin dashboard).  
 
-6. Maintenance & Feedback
-   ├─ Monitor rate limits & logs
-   ├─ Add new features based on placement team input
-   └─ Regularly update requirements.txt and Gemini model
+- **Flexibility to Evolving Requirements**  
+  Placement ecosystems change frequently (AI API updates, new scoring rules, enhanced feedback systems). Agile allows us to adapt quickly without major rework.  
 
+- **Continuous User Feedback**  
+  Students, placement officers, and recruiters can test early features and provide feedback, which directly influences the next iteration.  
 
+- **Faster Time-to-Market**  
+  Core modules (resume upload & AI scoring) can be launched as a Minimum Viable Product (MVP) while additional modules (quizzes, dashboards) are rolled out progressively.  
+
+- **Risk Reduction**  
+  Early iterations help identify risks like API rate limits (429 errors), scalability concerns, or data privacy gaps before full-scale deployment.  
+
+---
 
 
 
