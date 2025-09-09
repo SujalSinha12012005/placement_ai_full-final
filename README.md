@@ -144,53 +144,24 @@ FLASK_ENV=development
 5.Visit: http://127.0.0.1:5000/
 ```
 
-#!/bin/bash
 
-# === Project Name ===
-PROJECT_NAME="placement-ai"
-
-# === Create project directory structure ===
-mkdir -p $PROJECT_NAME/{resumes,templates}
-touch $PROJECT_NAME/{app.py,requirements.txt,.env,submissions.csv,users.csv}
-touch $PROJECT_NAME/templates/{base.html,upload.html,admin.html,quiz.html,quiz_result.html}
-
-# === Write README.md ===
-cat << 'EOF' > $PROJECT_NAME/README.md
-# Placement-AI Dashboard
-
-A Flask-based AI-powered platform designed to **analyze resumes**, manage candidate submissions, and provide a **dashboard interface for placement-related activities**. It supports **resume uploads, AI-driven scoring, quiz assessments, and admin monitoring**.
-
----
-
-## Features
-
-- **Resume Upload** – Candidates can upload their resumes (PDF).
-- **AI Resume Analysis** – Automatically scores resumes using LLM APIs (e.g., Gemini API).
-- **Quiz System** – Conduct quizzes to assess candidate knowledge.
-- **Dashboard for Admin** – View candidate submissions, scores, and quiz results.
-- **User Data Management** – Optional storage of user details for future reference.
-
----
 ## Table of Contents
 
-- [What it does](#what-it-does)
-- [Key features](#key-features)
-- [Tech stack](#tech-stack)
-- [System architecture (high-level)](#system-architecture-high-level)
-- [SDG alignment](#sdg-alignment)
-- [Risk factors & mitigation](#risk-factors--mitigation)
-- [Quick start](#quick-start)
-- [Environment variables](#environment-variables)
-- [File & CSV formats](#file--csv-formats)
+- placement-ai/
+├─ app.py                  # Main Flask application
+├─ requirements.txt        # Python dependencies
+├─ .env                    # Environment variables (GEMINI_API_KEY, FLASK_ENV)
+├─ resumes/                # Uploaded resumes (PDF files)
+├─ submissions.csv         # Stores AI analysis results
+├─ users.csv               # (Optional) Stores user details
+└─ templates/              # HTML templates
+   ├─ base.html
+   ├─ upload.html
+   ├─ admin.html
+   ├─ quiz.html
+   └─ quiz_result.html
 )
 
 ---
 
 
-
-## License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-EOF
-
-echo "✅ Placement-AI project structure and README.md created successfully!"
