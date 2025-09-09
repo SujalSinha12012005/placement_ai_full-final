@@ -92,19 +92,15 @@ python-dotenv
 System Architecture
 ====================
 
-+-------------------+        HTTP        +-----------------------+        API        +----------------------+
-|                   |  <-------------->  |                       |  <------------->  |                      |
-|    Web Browser    |                    |   Flask App (app.py)  |                   |   Google Gemini AI   |
-|                   |                    |                       |                   |                      |
-+-------------------+                    +-----------------------+                   +----------------------+
-                                                |      |      |
-                                                |      |      |
-                                                |      |      +--> Uses: /templates/*.html
-                                                |      +---------> Stores: /resumes/*.pdf
-                                                +---------------> Logs: submissions.csv
-
-
----
++-------------------+       HTTP        +-----------------------+       API        +----------------------+
+|                   |  <------------->  |                       |  <------------>  |                      |
+|   Web Browser     |                   |   Flask App (app.py)  |                  |  Google Gemini AI    |
+|                   |                   |                       |                  |                      |
++-------------------+                   +-----------------------+                  +----------------------+
+                                              |
+                                              |--- Uses: /templates/*.html
+                                              |--- Stores: /resumes/*.pdf
+                                              |--- Logs: submissions.csv
 
 ## SDG alignment
 
