@@ -89,18 +89,6 @@ python-dotenv
 - Gemini performs NLP tasks (scoring, recommendations, answers).  
 - Admin UI reads `submissions.csv` and serves the resume files from `/resumes`.
 
-System Architecture
-====================
-
-+-------------------+       HTTP        +-----------------------+       API        +----------------------+
-|                   |  <------------->  |                       |  <------------>  |                      |
-|   Web Browser     |                   |   Flask App (app.py)  |                  |  Google Gemini AI    |
-|                   |                   |                       |                  |                      |
-+-------------------+                   +-----------------------+                  +----------------------+
-                                              |
-                                              |--- Uses: /templates/*.html
-                                              |--- Stores: /resumes/*.pdf
-                                              |--- Logs: submissions.csv
 
 ## SDG alignment
 
@@ -146,6 +134,39 @@ FLASK_ENV=development
 5.Visit: http://127.0.0.1:5000/
 ```
 <img width="824" height="522" alt="image" src="https://github.com/user-attachments/assets/cdbee903-1071-4115-ac77-ffbf90624893" />
+
+1. Planning & Requirement Gathering
+   ├─ Define core features: resume upload, AI scoring, quiz, Q&A
+   ├─ Identify target users: students, placement admins
+   └─ Tools & stack finalized (Flask, Gemini, Bootstrap, CSV storage)
+
+2. Design
+   ├─ Wireframe: upload.html, admin.html, quiz.html
+   ├─ System architecture (Browser → Flask → Gemini)
+   └─ Define APIs and CSV schema
+
+3. Development (Iterative Sprints)
+   ├─ Sprint 1: Resume upload + CSV storage
+   ├─ Sprint 2: Gemini AI integration for scoring & suggestions
+   ├─ Sprint 3: Ask-a-Question module
+   ├─ Sprint 4: Quiz & results
+   └─ Sprint 5: Admin dashboard & caching
+
+4. Testing
+   ├─ Unit testing for Flask routes
+   ├─ API response handling (429 fallback, errors)
+   └─ Manual testing with 10–20 resumes
+
+5. Deployment
+   ├─ Local testing with `flask run`
+   ├─ Optional: Deploy to Heroku / Render / Railway
+   └─ Environment variables via `.env`
+
+6. Maintenance & Feedback
+   ├─ Monitor rate limits & logs
+   ├─ Add new features based on placement team input
+   └─ Regularly update requirements.txt and Gemini model
+
 
 
 
