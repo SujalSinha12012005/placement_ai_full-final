@@ -152,20 +152,15 @@ FLASK_ENV=development
 File & folder structure
 
 placement-ai/
-├─ app.py
-├─ requirements.txt
-├─ .env
-├─ resumes/              # uploaded PDFs
-├─ submissions.csv
-├─ users.csv
-└─ templates/
+├─ app.py                  # Main Flask app
+├─ requirements.txt        # Python dependencies
+├─ .env                    # Environment variables (GEMINI_API_KEY, FLASK_ENV)
+├─ resumes/                # Uploaded resumes (PDF files)
+├─ submissions.csv         # Stores AI analysis results
+├─ users.csv               # (Optional) Stores user details
+└─ templates/              # HTML templates
    ├─ base.html
    ├─ upload.html
    ├─ admin.html
    ├─ quiz.html
    └─ quiz_result.html
-
-  └─ quiz.html / quiz_result.html
-resumes/          # stored uploaded PDFs
-submissions.csv
-users.csv
