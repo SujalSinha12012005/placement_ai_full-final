@@ -143,8 +143,8 @@ FLASK_ENV=development
 4.Run: python app.py
 5.Visit: http://127.0.0.1:5000/
 ```
+<img width="824" height="522" alt="image" src="https://github.com/user-attachments/assets/cdbee903-1071-4115-ac77-ffbf90624893" />
 
-<img width="917" height="536" alt="image" src="https://github.com/user-attachments/assets/f9c935f5-3fbe-48f3-b75c-4b3f23b8066f" />
 
 
 
