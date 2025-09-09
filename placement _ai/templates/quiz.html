@@ -1,0 +1,21 @@
+<form method="POST">
+  {% for q in quiz %}
+    {% set q_index = loop.index0 %}
+    <div>
+      <p><strong>Q{{ loop.index }}. {{ q.question }}</strong></p>
+      {% for opt in q.options %}
+        <div>
+          <input type="radio" id="q{{ q_index }}_opt{{ loop.index0 }}"
+                 name="q{{ q_index }}"
+                 value="{{ opt | replace(' (correct)', '') }}"
+                 required>
+          <label for="q{{ q_index }}_opt{{ loop.index0 }}">
+            {{ opt | replace(' (correct)', '') }}
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+    <br>
+  {% endfor %}
+  <button type="submit">Submit Quiz</button>
+</form>

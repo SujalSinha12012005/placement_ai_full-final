@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow">
+  <h3 class="mb-3">Upload your Resume (PDF)</h3>
+  <form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input class="form-control" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input class="form-control" name="email" type="email" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Skills (comma separated)</label>
+      <input class="form-control" name="skills" placeholder="e.g. Python,SQL,Flask" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Resume (PDF)</label>
+      <input class="form-control" name="resume" type="file" accept="application/pdf" required>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+
+{% if score %}
+<hr class="my-4">
+<div class="card p-3 mt-3 shadow-sm">
+  <h4 class="mb-2">AI Resume Analysis</h4>
+  <p><strong>AI Score:</strong> {{ score }}</p>
+  <p><strong>Suggested Role:</strong> {{ best_role }}</p>
+  <p><strong>Missing Skills:</strong> {{ missing_skills }}</p>
+  <p><strong>Suggestions:</strong> {{ suggestions }}</p>
+
+  <!-- Add Take Quiz Button here -->
+  <a href="{{ url_for('quiz') }}" class="btn btn-success mt-3">Take Skill Quiz</a>
+</div>
+
+<!-- Ask a Question Section -->
+<hr class="my-4">
+<div class="card p-3 mt-3 shadow-sm">
+  <h4 class="mb-2">Ask a Question about Your Resume</h4>
+  <form action="{{ url_for('ask_question') }}" method="post">
+    <div class="mb-3">
+      <input class="form-control" type="text" name="user_question"
+             placeholder="Ask about your resume or career..." required>
+    </div>
+    <button class="btn btn-secondary" type="submit">Ask</button>
+  </form>
+</div>
+
+{% if answer %}
+<div class="card p-3 mt-3 shadow-sm bg-light">
+  <h5>Answer:</h5>
+  <p>{{ answer }}</p>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

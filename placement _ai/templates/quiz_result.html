@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quiz Results</h2>
+<p><strong>Your Score: {{ score }} / {{ results|length }}</strong></p>
+<hr>
+{% for r in results %}
+  <div class="mb-4">
+    <strong>{{ loop.index }}. {{ r.question }}</strong><br>
+    <p>Your answer: <span style="color: {% if r.is_correct %}green{% else %}red{% endif %};">
+      {{ r.user_answer or "No answer" }}
+    </span></p>
+    <p>Correct answer: <strong>{{ r.correct_answer }}</strong></p>
+  </div>
+{% endfor %}
+{% endblock %}
