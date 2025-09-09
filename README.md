@@ -90,21 +90,6 @@ python-dotenv
 - Admin UI reads `submissions.csv` and serves the resume files from `/resumes`.
 ## System Architecture
 
-```mermaid
-flowchart LR
-    A[Web Browser] <--> B[Flask App (app.py)]
-    B <--> C[Google Gemini AI]
-
-    subgraph Flask App Details
-        B1[Uses: /templates/*.html]
-        B2[Stores: /resumes/*.pdf]
-        B3[Logs: submissions.csv]
-    end
-
-    B --> B1
-    B --> B2
-    B --> B3
-
 
 ## SDG alignment
 
