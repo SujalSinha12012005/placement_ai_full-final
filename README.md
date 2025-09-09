@@ -158,24 +158,3 @@ templates/
 resumes/          # stored uploaded PDFs
 submissions.csv
 users.csv
-Routes / Endpoints summary
-
-GET / — home page
-
-GET|POST /signup — create account
-
-GET|POST /login — login
-
-GET /logout — logout
-
-GET|POST /upload — upload resume and receive AI analysis
-
-POST /ask — ask a question (AI) — returns answer and latest submission context
-
-GET|POST /quiz — quiz (GET = new quiz, POST = submit answers)
-
-GET /admin — admin dashboard (requires admin login)
-
-GET /resumes/<filename> — serve resume file  
-
-
