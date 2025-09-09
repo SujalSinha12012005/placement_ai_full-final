@@ -89,13 +89,19 @@ python-dotenv
 - Gemini performs NLP tasks (scoring, recommendations, answers).  
 - Admin UI reads `submissions.csv` and serves the resume files from `/resumes`.
 
-**ASCII diagram**
+System Architecture
+====================
 
-[ Browser ] <--HTTP--> [ Flask app (app.py) ] <--API--> [ Google Gemini AI ]
-| | |
-| |-- stores -> submissions.csv
-| |-- serves -> /templates/*.html
-| |-- stores files -> /resumes/
++-------------------+        HTTP        +-----------------------+        API        +----------------------+
+|                   |  <-------------->  |                       |  <------------->  |                      |
+|    Web Browser    |                    |   Flask App (app.py)  |                   |   Google Gemini AI   |
+|                   |                    |                       |                   |                      |
++-------------------+                    +-----------------------+                   +----------------------+
+                                                |      |      |
+                                                |      |      |
+                                                |      |      +--> Uses: /templates/*.html
+                                                |      +---------> Stores: /resumes/*.pdf
+                                                +---------------> Logs: submissions.csv
 
 
 ---
