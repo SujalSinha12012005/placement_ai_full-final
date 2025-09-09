@@ -148,12 +148,23 @@ FLASK_ENV=development
 4.Run: python app.py
 5.Visit: http://127.0.0.1:5000/
 ```
-File & CSV formats
-app.py
-templates/
-  ├─ base.html
-  ├─ upload.html
-  ├─ admin.html
+
+File & folder structure
+
+placement-ai/
+├─ app.py
+├─ requirements.txt
+├─ .env
+├─ resumes/              # uploaded PDFs
+├─ submissions.csv
+├─ users.csv
+└─ templates/
+   ├─ base.html
+   ├─ upload.html
+   ├─ admin.html
+   ├─ quiz.html
+   └─ quiz_result.html
+
   └─ quiz.html / quiz_result.html
 resumes/          # stored uploaded PDFs
 submissions.csv
