@@ -127,7 +127,7 @@ python-dotenv
 1. Clone repo:
 ```bash
 git clone https://github.com/<your-username>/placement-ai.git
-cd placement-ai
+cd placement-ai 
 
 2.Create a virtual environment & install:
 python -m venv .venv
