@@ -171,87 +171,22 @@ A Flask-based AI-powered platform designed to **analyze resumes**, manage candid
 - **User Data Management** – Optional storage of user details for future reference.
 
 ---
+## Table of Contents
 
-## Project Structure
-
-\`\`\`
-placement-ai/
-├─ app.py                  # Main Flask application
-├─ requirements.txt        # Python dependencies
-├─ .env                    # Environment variables (GEMINI_API_KEY, FLASK_ENV)
-├─ resumes/                # Uploaded resumes (PDF format)
-├─ submissions.csv         # Stores AI analysis results
-├─ users.csv               # (Optional) Stores user details
-└─ templates/              # HTML templates
-   ├─ base.html
-   ├─ upload.html
-   ├─ admin.html
-   ├─ quiz.html
-   └─ quiz_result.html
-\`\`\`
+- [What it does](#what-it-does)
+- [Key features](#key-features)
+- [Tech stack](#tech-stack)
+- [System architecture (high-level)](#system-architecture-high-level)
+- [SDG alignment](#sdg-alignment)
+- [Risk factors & mitigation](#risk-factors--mitigation)
+- [Quick start](#quick-start)
+- [Environment variables](#environment-variables)
+- [File & CSV formats](#file--csv-formats)
+)
 
 ---
 
-## Installation & Setup
 
-1. **Clone the repository:**
-   \`\`\`bash
-   git clone https://github.com/your-username/placement-ai.git
-   cd placement-ai
-   \`\`\`
-
-2. **Create and activate a virtual environment:**
-   \`\`\`bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   \`\`\`
-
-3. **Install dependencies:**
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
-
-4. **Configure environment variables:**
-   Create a \`.env\` file in the root directory with:
-   \`\`\`
-   GEMINI_API_KEY=your_api_key_here
-   FLASK_ENV=development
-   \`\`\`
-
-5. **Run the Flask app:**
-   \`\`\`bash
-   flask run
-   \`\`\`
-
-6. **Access the application:**
-   \`\`\`
-   http://127.0.0.1:5000/
-   \`\`\`
-
----
-
-## Usage
-
-- **Candidates:** Upload resume → Take quiz → View results.
-- **Admin:** Login to dashboard → View submissions → Download CSV → Monitor quiz performance.
-
----
-
-## CSV Data
-
-- \`submissions.csv\`: Stores name, email, resume filename, AI score, and recommended role.
-- \`users.csv\` (optional): Stores user details for placement records.
-
----
-
-## Future Enhancements
-
-- Integration with **ATS (Applicant Tracking System)**.
-- Support for **multiple AI models**.
-- Role-based **admin & recruiter logins**.
-- Enhanced analytics & reporting dashboard.
-
----
 
 ## License
 
