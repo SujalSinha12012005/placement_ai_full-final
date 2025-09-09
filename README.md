@@ -144,6 +144,34 @@ FLASK_ENV=development
 5.Visit: http://127.0.0.1:5000/
 ```
 
+#!/bin/bash
+
+# === Project Name ===
+PROJECT_NAME="placement-ai"
+
+# === Create project directory structure ===
+mkdir -p $PROJECT_NAME/{resumes,templates}
+touch $PROJECT_NAME/{app.py,requirements.txt,.env,submissions.csv,users.csv}
+touch $PROJECT_NAME/templates/{base.html,upload.html,admin.html,quiz.html,quiz_result.html}
+
+# === Write README.md ===
+cat << 'EOF' > $PROJECT_NAME/README.md
+# Placement-AI Dashboard
+
+A Flask-based AI-powered platform designed to **analyze resumes**, manage candidate submissions, and provide a **dashboard interface for placement-related activities**. It supports **resume uploads, AI-driven scoring, quiz assessments, and admin monitoring**.
+
+---
+
+## Features
+
+- **Resume Upload** – Candidates can upload their resumes (PDF).
+- **AI Resume Analysis** – Automatically scores resumes using LLM APIs (e.g., Gemini API).
+- **Quiz System** – Conduct quizzes to assess candidate knowledge.
+- **Dashboard for Admin** – View candidate submissions, scores, and quiz results.
+- **User Data Management** – Optional storage of user details for future reference.
+
+---
+
 ## Project Structure
 
 \`\`\`
@@ -163,3 +191,71 @@ placement-ai/
 \`\`\`
 
 ---
+
+## Installation & Setup
+
+1. **Clone the repository:**
+   \`\`\`bash
+   git clone https://github.com/your-username/placement-ai.git
+   cd placement-ai
+   \`\`\`
+
+2. **Create and activate a virtual environment:**
+   \`\`\`bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   \`\`\`
+
+3. **Install dependencies:**
+   \`\`\`bash
+   pip install -r requirements.txt
+   \`\`\`
+
+4. **Configure environment variables:**
+   Create a \`.env\` file in the root directory with:
+   \`\`\`
+   GEMINI_API_KEY=your_api_key_here
+   FLASK_ENV=development
+   \`\`\`
+
+5. **Run the Flask app:**
+   \`\`\`bash
+   flask run
+   \`\`\`
+
+6. **Access the application:**
+   \`\`\`
+   http://127.0.0.1:5000/
+   \`\`\`
+
+---
+
+## Usage
+
+- **Candidates:** Upload resume → Take quiz → View results.
+- **Admin:** Login to dashboard → View submissions → Download CSV → Monitor quiz performance.
+
+---
+
+## CSV Data
+
+- \`submissions.csv\`: Stores name, email, resume filename, AI score, and recommended role.
+- \`users.csv\` (optional): Stores user details for placement records.
+
+---
+
+## Future Enhancements
+
+- Integration with **ATS (Applicant Tracking System)**.
+- Support for **multiple AI models**.
+- Role-based **admin & recruiter logins**.
+- Enhanced analytics & reporting dashboard.
+
+---
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+EOF
+
+echo "✅ Placement-AI project structure and README.md created successfully!"
