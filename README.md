@@ -149,7 +149,7 @@ FLASK_ENV=development
 5.Visit: http://127.0.0.1:5000/
 ```
 
-File & folder structure
+##File & folder structure
 
 placement-ai/
 ├─ app.py                  # Main Flask app
