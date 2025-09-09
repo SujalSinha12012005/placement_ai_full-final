@@ -27,12 +27,7 @@
 - [Quick start](#quick-start)
 - [Environment variables](#environment-variables)
 - [File & CSV formats](#file--csv-formats)
-- [Routes / Endpoints summary](#routes--endpoints-summary)
-- [Caching & rate-limit handling (avoid 429s)](#caching--rate-limit-handling-avoid-429s)
-- [Testing & troubleshooting](#testing--troubleshooting)
-- [Roadmap & recommended next steps](#roadmap--recommended-next-steps)
-- [Contributing](#contributing)
-- [License](#license)
+)
 
 ---
 
