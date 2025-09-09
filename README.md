@@ -88,15 +88,22 @@ python-dotenv
 - The Flask app handles auth (CSV), file uploads, AI requests, and CSV storage.  
 - Gemini performs NLP tasks (scoring, recommendations, answers).  
 - Admin UI reads `submissions.csv` and serves the resume files from `/resumes`.
-- +-------------------+ HTTP +-----------------------+ API +----------------------+
-| | <-------------> | | <------------> | |
-| Web Browser | | Flask App (app.py) | | Google Gemini AI |
-| | | | | |
-+-------------------+ +-----------------------+ +----------------------+
-|
-|--- Uses: /templates/.html
-|--- Stores: /resumes/.pdf
-|--- Logs: submissions.csv
+## System Architecture
+
+```mermaid
+flowchart LR
+    A[Web Browser] <--> B[Flask App (app.py)]
+    B <--> C[Google Gemini AI]
+
+    subgraph Flask App Details
+        B1[Uses: /templates/*.html]
+        B2[Stores: /resumes/*.pdf]
+        B3[Logs: submissions.csv]
+    end
+
+    B --> B1
+    B --> B2
+    B --> B3
 
 
 ## SDG alignment
