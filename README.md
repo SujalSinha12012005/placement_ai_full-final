@@ -26,7 +26,7 @@
 - [Risk factors & mitigation](#risk-factors--mitigation)
 - [Quick start](#quick-start)
 - [Development Methodology](#development-methodology-agile-sdlc)
-- [File & CSV formats](#file--csv-formats)
+
 )
 
 ---
