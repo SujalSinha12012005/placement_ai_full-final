@@ -25,7 +25,7 @@
 - [SDG alignment](#sdg-alignment)
 - [Risk factors & mitigation](#risk-factors--mitigation)
 - [Quick start](#quick-start)
-- [Environment variables](#environment-variables)
+- [Development Methodology: Agile SDLC](#environment-variables)
 - [File & CSV formats](#file--csv-formats)
 )
 
