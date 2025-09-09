@@ -144,11 +144,14 @@ FLASK_ENV=development
 5.Visit: http://127.0.0.1:5000/
 ```
 
+## Project Structure
+
+\`\`\`
 placement-ai/
-├─ app.py                  # Main Flask app
+├─ app.py                  # Main Flask application
 ├─ requirements.txt        # Python dependencies
 ├─ .env                    # Environment variables (GEMINI_API_KEY, FLASK_ENV)
-├─ resumes/                # Uploaded resumes (PDF files)
+├─ resumes/                # Uploaded resumes (PDF format)
 ├─ submissions.csv         # Stores AI analysis results
 ├─ users.csv               # (Optional) Stores user details
 └─ templates/              # HTML templates
@@ -157,3 +160,6 @@ placement-ai/
    ├─ admin.html
    ├─ quiz.html
    └─ quiz_result.html
+\`\`\`
+
+---
