@@ -53,7 +53,7 @@ def clean_to_json(text: str) -> str:
 
 def analyze_resume_with_ai(skills_text: str):
     try:
-        model = genai.GenerativeModel("models/gemini-1.5-flash")
+        model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
         You are a hiring assistant. Given this candidate's skills:
         {skills_text}
@@ -90,7 +90,7 @@ def analyze_resume_with_ai(skills_text: str):
 
 def generate_quiz_from_skills(skills_text: str):
     try:
-        model = genai.GenerativeModel("models/gemini-1.5-flash")
+        model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
         You are a quiz generator. Based on these skills: {skills_text}
         Create 4-5 multiple choice questions with 4 options each.
@@ -322,7 +322,7 @@ def ask_question():
     user_question = request.form.get("user_question", "").strip()
 
     try:
-        model = genai.GenerativeModel("models/gemini-1.5-flash")
+        model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
         You are a helpful career advisor. Answer this question about resume building or career advice in a concise way:
 
